@@ -581,7 +581,7 @@ require('lazy').setup({
 
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
-      local ensure_installed = vim.tbl_keys( servers or {})
+      local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
       })
@@ -629,8 +629,9 @@ require('lazy').setup({
         }
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
         bash = { 'shfmt' },
+        c = { 'clang_format' },
+        cpp = { 'clang_format' },
         cs = { 'csharpier' },
         css = { 'prettier' },
         scss = { 'prettier' },
@@ -642,13 +643,13 @@ require('lazy').setup({
         javascript = { 'prettier' },
         javascriptreact = { 'prettier' },
         json = { 'biome' },
+        lua = { 'stylua' },
         markdown = { 'deno_fmt' },
-        nix = { "nixpkgs_fmt" },
+        nix = { 'nixpkgs_fmt' },
         ocaml = { 'ocamlformat' },
         typescript = { 'prettier' },
         typescriptreact = { 'prettier' },
         vue = { 'prettier' },
-        lua = { 'stylua' },
         toml = { 'taplo' },
         yaml = { 'yamlfmt' },
         zig = { 'zigfmt' },
