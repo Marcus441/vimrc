@@ -525,12 +525,12 @@ require('lazy').setup({
         lemminx = {},
         nil_ls = {
           settings = {
-            ["nil"] = {
+            ['nil'] = {
               formatting = {
-                command = { "nixpkgs-fmt" }, -- or "alejandra" if you're using that instead
-              }
-            }
-          }
+                command = { 'nixpkgs-fmt' },
+              },
+            },
+          },
         },
         gopls = {},
         jsonls = {},
